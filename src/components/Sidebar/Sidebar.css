@@ -1,0 +1,55 @@
+.Sidebar{
+    display:flex;
+    flex-direction:column;
+    position:relative;
+    padding-top:1rem;
+    transition:all 300ms ease;
+}
+.logo{
+    display:flex;
+    height:4rem;
+    font-weight:bold;
+    font-size:72px;
+    gap:1rem;
+    align-items:centre;
+    justify-content:centre;
+}
+.logo>span{
+    font-weight:bold; 
+    font-size:72px;
+}
+.logo>img{
+    width: 3rem;
+    height:3rem;
+}
+.menu{
+    margin-top:1rem;
+    display:flex;
+    flex-direction:column;
+    gap:2rem;
+}
+.menuItem{
+    display:flex;
+    align-items:center;
+    gap:1rem;
+    border-radius:0.5rem;
+   
+}
+.menuItem:hover{
+    cursor:pointer;
+}
+.active{
+    background:var(--activeItem);
+    margin-left:0;
+}
+.active::before{
+    content:'';
+    width:8px;
+    height:100%;
+    background:var(--pink);
+    margin-left:calc(1rem -8px);
+}
+.menu.menuItem:last-child{
+    position:absolute;
+    bottom:2.3rem;
+}
